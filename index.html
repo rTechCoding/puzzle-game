@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Birthday Puzzle Challenge — Sliding Puzzle</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <h2>🧩 Birthday Puzzle Challenge</h2>
+
+    <div class="controls">
+      <label>Difficulty</label>
+      <select id="difficulty">
+        <option value="3">Easy (3 × 3)</option>
+        <option value="4">Medium (4 × 4)</option>
+        <option value="5">Hard (5 × 5)</option>
+      </select>
+
+      <button id="newGame">New Game</button>
+      <button id="showSolution">Show Solution</button>
+
+      <div class="meta" aria-live="polite">
+        <div>Time: <b id="timer">00:00</b></div>
+        <div>Moves: <b id="moves">0</b></div>
+      </div>
+
+      <div style="margin-left:8px;">
+        <label for="upload" class="upload-btn">📁 Choose Image</label>
+        <input id="upload" type="file" accept="image/*">
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="board-wrap">
+        <div class="puzzle-board" id="board" role="grid" aria-label="Puzzle board"></div>
+      </div>
+
+      <aside class="side">
+        <h4 style="margin:0 0 8px">Solution preview</h4>
+        <img id="solutionImg" src="https://picsum.photos/800/800?random=1" alt="solution">
+        <div class="small">Tip: drag a piece and drop it on another piece to swap them (works with touch).</div>
+        <div class="completion" id="doneBox">
+          <div class="popup">
+            <h3>🧩 Puzzle Challenge Solved! 🎉</h3>
+            <p>Time: <span id="finalTime"></span></p>
+            <p>Moves: <span id="finalMoves"></span></p>
+            <button id="playAgain">Play again</button>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+    <footer class="footer">
+      © 2025 Birthday Puzzle — Built with ❤️ By <a href="https://in.linkedin.com/in/rahat-ansari-52409b223"
+        class="font-weight-bold" target="_blank">rTechCoding || Rahat
+        Ansari</a> for fun & learning
+    </footer>
+  </div>
+
+  <script src="assets/script.js"></script>
+</body>
+
+</html>
