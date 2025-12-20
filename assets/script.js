@@ -232,4 +232,49 @@
       // expose for debugging if needed
       window.__puzzle = { newGame, getState: () => ({ size, tiles, moves, time: timerEl.textContent }) };
 
+
     })();
+
+/* Disable Right Click */
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+/* Disable DevTools key shortcuts */
+document.addEventListener('keydown', function (e) {
+
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+        return false;
+    }
+
+    // Ctrl + Shift + I / J / C
+    if (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) {
+        e.preventDefault();
+        return false;
+    }
+
+    // Ctrl + U (View Source)
+    if (e.ctrlKey && e.key.toUpperCase() === 'U') {
+        e.preventDefault();
+        return false;
+    }
+
+    // Ctrl + S (Save Page)
+    if (e.ctrlKey && e.key.toUpperCase() === 'S') {
+        e.preventDefault();
+        return false;
+    }
+});
+
+/* Extra: Detect DevTools open (basic) */
+setInterval(() => {
+    const threshold = 160;
+    if (
+        window.outerWidth - window.innerWidth > threshold ||
+        window.outerHeight - window.innerHeight > threshold
+    ) {
+        document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;'>⚠ Developer Tools Detected</h2>";
+    }
+}, 1000);
