@@ -9,7 +9,6 @@
       font-family: Inter, system-ui, Arial;
       margin: 20px;
       background: linear-gradient(135deg, #fceabb, #f8b500);
-      /* warm yellow-orange gradient */
       color: #2f2f2f;
       display: flex;
       justify-content: center;
@@ -235,4 +234,5 @@
       margin-top: 20px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       font-weight: 500;
+
     }
