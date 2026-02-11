@@ -278,3 +278,4 @@ setInterval(() => {
         document.body.innerHTML = "<h2 style='text-align:center;margin-top:20%;'>⚠ Developer Tools Detected</h2>";
     }
 }, 1000);
+
